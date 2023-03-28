@@ -1,16 +1,16 @@
-package com.example.myapplicationnavigation.ui.settings;
+package com.example.myapplicationnavigation.ui.profile;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-public class HelpViewModel extends ViewModel {
+public class ProfileViewModel extends ViewModel {
 
     private final MutableLiveData<String> mText;
 
-    public HelpViewModel() {
+    public ProfileViewModel() {
         mText = new MutableLiveData<>();
-        mText.setValue("This is help fragment");
+        mText.setValue("This is profile fragment");
     }
 
     public LiveData<String> getText() {

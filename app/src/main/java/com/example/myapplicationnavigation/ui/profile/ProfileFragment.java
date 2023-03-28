@@ -1,4 +1,4 @@
-package com.example.myapplicationnavigation.ui.settings;
+package com.example.myapplicationnavigation.ui.profile;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -10,23 +10,22 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
-import com.example.myapplicationnavigation.databinding.FragmentHelpBinding;
+import com.example.myapplicationnavigation.databinding.FragmentProfileBinding;
 
-public class HelpFragment extends Fragment {
+public class ProfileFragment extends Fragment {
 
-    private FragmentHelpBinding binding;
-    private HelpViewModel helpViewModel;
+    private FragmentProfileBinding binding;
+
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-         helpViewModel =
-                new ViewModelProvider(this).get(HelpViewModel.class);
+        ProfileViewModel profileViewModel =
+                new ViewModelProvider(this).get(ProfileViewModel.class);
 
-        binding = FragmentHelpBinding.inflate(inflater, container, false);
+        binding = FragmentProfileBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-        final TextView textView = binding.textHelp;
-        helpViewModel.getText().observe(getViewLifecycleOwner(),
-                textView::setText);
+        final TextView textView = binding.textProfile;
+        profileViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
         return root;
     }
 
