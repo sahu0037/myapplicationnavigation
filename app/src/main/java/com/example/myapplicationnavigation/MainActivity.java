@@ -27,11 +27,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
     }
-        public void sendMessage(View view){
-            Intent intent = new Intent(this, MainNavigationActivity.class);
-            EditText editTest = (EditText) findViewById(R.id.Username);
-            String message = editTest.getText().toString();
-            intent.putExtra(EXTRA_MESSAGE, message);
-            startActivity(intent);
-        }
+    public void sendMessage(View view){
+        Intent intent = new Intent(this, MainNavigationActivity.class);
+        EditText editTest = (EditText) findViewById(R.id.Username);
+        String message = editTest.getText().toString();
+        intent.putExtra(EXTRA_MESSAGE, message);
+        startActivity(intent);
+    }
 }

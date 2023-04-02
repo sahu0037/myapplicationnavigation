@@ -7,16 +7,178 @@
     tools:context=".ui.history.HistoryFragment">
 
     <TextView
-        android:id="@+id/text_history"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:id="@+id/chatHistory4"
+        android:layout_width="367dp"
+        android:layout_height="19dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:ems="10"
+        android:text="This week"
+        android:textAlignment="viewStart"
+        android:textColor="#000000"
+        android:textSize="18dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/bottyProfile1"
+        android:layout_width="72dp"
+        android:layout_height="61dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="28dp"
+        android:contentDescription="@string/menu_profile"
+        android:src="@drawable/profile"
+        app:layout_constraintEnd_toStartOf="@+id/chatHistory1"
+        app:layout_constraintHorizontal_bias="0.031"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/chatHistory4" />
+
+    <TextView
+        android:id="@+id/chatHistory1"
+        android:layout_width="279dp"
+        android:layout_height="66dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="21dp"
+        android:ems="10"
+        android:text="Okay, might I recommend the following resources: (1) https://www.cdc.gov/stres..."
+        android:textAlignment="viewStart"
+        android:textColor="#000000"
+        android:textSize="18dp"
+        app:layout_constraintBottom_toTopOf="@+id/continueChatButton1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/bottyProfile1"
+        app:layout_constraintTop_toBottomOf="@+id/chatHistory4" />
+
+    <Button
+        android:id="@+id/continueChatButton1"
+        android:layout_width="150dp"
+        android:layout_height="37dp"
+        android:layout_marginTop="20dp"
+        android:background="#23296B"
+        android:onClick="@string/menu_home"
+        android:text="Continue chat"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/chatHistory1" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="409dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="28dp"
+        android:background="?android:attr/listDivider"
+        android:foregroundTint="#9C2E2E"
+        app:layout_constraintTop_toBottomOf="@+id/continueChatButton1"
+        tools:layout_editor_absoluteX="1dp" />
+
+    <ImageView
+        android:id="@+id/bottyProfile2"
+        android:layout_width="73dp"
+        android:layout_height="61dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="28dp"
+        android:contentDescription="@string/menu_profile"
+        android:src="@drawable/profile"
+        app:layout_constraintEnd_toStartOf="@+id/chatHistory2"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divider" />
+
+    <TextView
+        android:id="@+id/chatHistory2"
+        android:layout_width="279dp"
+        android:layout_height="64dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="20dp"
+        android:ems="10"
+        android:text="Stress is a common result of big life changes so it makes sense that you are..."
+        android:textAlignment="viewStart"
+        android:textColor="#000000"
+        android:textSize="18dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/bottyProfile2"
+        app:layout_constraintTop_toBottomOf="@+id/divider" />
+
+    <Button
+        android:id="@+id/continueChatButton2"
+        android:layout_width="150dp"
+        android:layout_height="37dp"
+        android:layout_marginTop="20dp"
+        android:background="#23296B"
+        android:onClick="@string/menu_home"
+        android:text="Continue chat"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/chatHistory2" />
+
+    <View
+        android:id="@+id/divider2"
+        android:layout_width="409dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="28dp"
+        android:background="?android:attr/listDivider"
+        android:foregroundTint="#9C2E2E"
+        app:layout_constraintTop_toBottomOf="@+id/continueChatButton2"
+        tools:layout_editor_absoluteX="1dp" />
+
+    <ImageView
+        android:id="@+id/bottyProfile3"
+        android:layout_width="73dp"
+        android:layout_height="61dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="28dp"
+        android:contentDescription="@string/menu_profile"
+        android:src="@drawable/profile"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divider2" />
+
+    <TextView
+        android:id="@+id/chatHistory3"
+        android:layout_width="279dp"
+        android:layout_height="64dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="20dp"
+        android:ems="10"
+        android:text="Okay, thank you for the feedback. Your information is getting sent to a relevent..."
+        android:textAlignment="viewStart"
+        android:textColor="#000000"
+        android:textSize="18dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/bottyProfile3"
+        app:layout_constraintTop_toBottomOf="@+id/divider2" />
+
+    <Button
+        android:id="@+id/continueChatButton3"
+        android:layout_width="150dp"
+        android:layout_height="37dp"
+        android:layout_marginTop="20dp"
+        android:background="#23296B"
+        android:onClick="@string/menu_home"
+        android:text="Continue chat"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/chatHistory3" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
