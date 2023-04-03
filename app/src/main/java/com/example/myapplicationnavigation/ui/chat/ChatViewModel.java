@@ -3,17 +3,38 @@ package com.example.myapplicationnavigation.ui.chat;
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
+ public class ChatViewModel extends ViewModel {
+        private MutableLiveData<String> botResponseLiveData = new MutableLiveData<>();
 
-public class ChatViewModel extends ViewModel {
+        private String[] botResponses = {
+                "Botty: Hey there! How are you feeling today?",
+                "Botty: Oh no! That sounds terrible. Do you want some recommendations to reduce your stress?",
+                "Nice to meet you!",
+                "Goodbye!"
+        };
 
-    private final MutableLiveData<String> mText;
+        public void processInput(String input) {
+            switch (input) {
+                case "hi":
+                case "hello":
+                    botResponseLiveData.setValue(botResponses[0]);
+                    break;
+                case "hey, i'm feeling like i'm dying here in the pile of homework":
+                    botResponseLiveData.setValue(botResponses[1]);
+                    break;
+                case "nice to meet you":
+                    botResponseLiveData.setValue(botResponses[2]);
+                    break;
+                case "goodbye":
+                    botResponseLiveData.setValue(botResponses[3]);
+                    break;
+                default:
+                    botResponseLiveData.setValue("Sorry, I didn't understand.");
+                    break;
+            }
+        }
 
-    public ChatViewModel() {
-        mText = new MutableLiveData<>();
-        mText.setValue("This is chat fragment");
+        public LiveData<String> getBotResponseLiveData() {
+            return botResponseLiveData;
+        }
     }
-
-    public LiveData<String> getText() {
-        return mText;
-    }
-}
