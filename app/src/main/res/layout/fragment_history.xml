@@ -62,7 +62,7 @@
         android:layout_height="37dp"
         android:layout_marginTop="20dp"
         android:background="#23296B"
-        android:onClick="@string/menu_home"
+        android:onClick="home"
         android:text="Continue chat"
         android:textAllCaps="false"
         android:textColor="#FFFFFF"
