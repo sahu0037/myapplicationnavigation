@@ -28,27 +28,6 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.example.myapplicationnavigation.HistoryActivity1"
-            android:parentActivityName=".MainNavigationActivity" >
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MainNavigationActivity" />
-        </activity>
-        <activity
-            android:name="com.example.myapplicationnavigation.HistoryActivity2"
-            android:parentActivityName=".MainNavigationActivity" >
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MainNavigationActivity" />
-        </activity>
-        <activity
-            android:name="com.example.myapplicationnavigation.HistoryActivity3"
-            android:parentActivityName=".MainNavigationActivity" >
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MainNavigationActivity" />
-        </activity>
-        <activity
             android:name=".SecondActivity"
             android:parentActivityName=".MainActivity" >
             <meta-data

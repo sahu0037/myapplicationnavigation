@@ -35,4 +35,28 @@
         android:label="@string/menu_setting"
         tools:layout="@layout/fragment_setting" />
 
+    <fragment
+        android:id="@+id/nav_change_password"
+        android:name="com.example.myapplicationnavigation.ui.changePassword.ChangePasswordFragment"
+        android:label="Change Password"
+        tools:layout="@layout/fragment_change_password" />
+
+    <fragment
+        android:id="@+id/nav_history_1"
+        android:name="com.example.myapplicationnavigation.ui.subHistory1.SubHistory1Fragment"
+        android:label="Chat History"
+        tools:layout="@layout/fragment_chat_history_1" />
+
+    <fragment
+        android:id="@+id/nav_history_2"
+        android:name="com.example.myapplicationnavigation.ui.subHistory2.SubHistory2Fragment"
+        android:label="Chat History"
+        tools:layout="@layout/fragment_chat_history_2" />
+
+    <fragment
+        android:id="@+id/nav_history_3"
+        android:name="com.example.myapplicationnavigation.ui.subHistory3.SubHistory3Fragment"
+        android:label="Chat History"
+        tools:layout="@layout/fragment_chat_history_3" />
+
 </navigation>

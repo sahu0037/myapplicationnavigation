@@ -14,9 +14,12 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
+import androidx.navigation.NavController;
+import androidx.navigation.Navigation;
 
 import com.example.myapplicationnavigation.MainActivity;
 import com.example.myapplicationnavigation.MainNavigationActivity;
+import com.example.myapplicationnavigation.R;
 import com.example.myapplicationnavigation.databinding.FragmentProfileBinding;
 import com.example.myapplicationnavigation.ui.home.HomeViewModel;
 
@@ -43,7 +46,8 @@ public class ProfileFragment extends Fragment {
         final Button changePassword = binding.changePasswordButton;
         changePassword.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                startActivity(new Intent(v.getContext(), MainActivity.class));
+                NavController navController = Navigation.findNavController(getActivity(), R.id.nav_host_fragment_content_main);
+                navController.navigate(R.id.nav_change_password);
             }
         });
 
