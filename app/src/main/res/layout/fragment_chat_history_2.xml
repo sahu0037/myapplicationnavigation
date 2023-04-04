@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.chat.ChatFragment"
+    android:animateLayoutChanges="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="16dp"
+            android:text="Chat Bot"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/chat1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Botty"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="276dp"
+            android:layout_height="wrap_content"
+            android:textAllCaps="false"
+            android:text="Hey there! The weather is nice today. I hope you are feeling great as well!" />
+
+        <TextView
+            android:id="@+id/chat2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="You"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="I'm okay. Things are a bit hectic right now to be honest."
+            android:textAllCaps="false" />
+
+        <TextView
+            android:id="@+id/chat3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Botty"
+            android:textSize="18sp" />
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Is it because of school work?"
+            android:textAllCaps="false" />
+
+        <TextView
+            android:id="@+id/chat4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="You"
+            android:textSize="18sp" />
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No, actually my parents just got divorced. I feel so stressed out right now..."
+            android:textAllCaps="false" />
+
+        <TextView
+            android:id="@+id/chat5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Botty"
+            android:textSize="18sp" />
+        <Button
+            android:id="@+id/button5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Stress is a common result of big life changes so it makes sense that you are feeling that way. I would recommend you taking it easy, practice breathing and do some light exercise."
+            android:textAllCaps="false" />
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/bot_response"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+        </ScrollView>
+
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:orientation="horizontal"-->
+<!--            android:padding="16dp">-->
+
+<!--            <EditText-->
+<!--                android:id="@+id/user_input"-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_weight="1"-->
+<!--                android:hint="Type your message here"-->
+<!--                android:textSize="18sp" />-->
+
+<!--            <Button-->
+<!--                android:id="@+id/send_button"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Send"-->
+<!--                android:textSize="18sp" />-->
+
+<!--        </LinearLayout>-->
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
