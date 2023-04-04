@@ -6,17 +6,163 @@
     android:layout_height="match_parent"
     tools:context=".ui.profile.ProfileFragment">
 
-    <TextView
-        android:id="@+id/text_profile"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <View
+        android:id="@+id/topContainer"
+        android:layout_width="420dp"
+        android:layout_height="312dp"
+        android:background="#23296B"
+        app:layout_constraintBottom_toTopOf="@+id/bottomContainer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/profile_image"
+        android:layout_width="135dp"
+        android:layout_height="80dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:contentDescription="@string/menu_profile"
+        android:src="@drawable/profile"
+        app:layout_constraintBottom_toTopOf="@+id/bottomContainer"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.086" />
+
+    <EditText
+        android:id="@+id/profileUserName"
+        android:layout_width="400dp"
+        android:layout_height="57dp"
+        android:layout_marginBottom="416dp"
+        android:ems="10"
+        android:text="Eugene Bagge"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <View
+        android:id="@+id/bottomContainer"
+        android:layout_width="411dp"
+        android:layout_height="152dp"
+        android:layout_marginTop="56dp"
+        android:layout_marginBottom="48dp"
+        android:background="#69E0E4"
+        app:layout_constraintBottom_toBottomOf="@+id/changePasswordButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/profileUserName" />
+
+    <EditText
+        android:id="@+id/passwordText"
+        android:layout_width="87dp"
+        android:layout_height="66dp"
+        android:layout_marginStart="6dp"
+        android:layout_marginTop="68dp"
+        android:layout_marginEnd="318dp"
+        android:layout_marginBottom="28dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Password"
+        android:textColor="#1F2D3D"
+        app:layout_constraintBottom_toBottomOf="@+id/bottomContainer"
+        app:layout_constraintEnd_toEndOf="@+id/bottomContainer"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/bottomContainer"
+        app:layout_constraintTop_toTopOf="@+id/bottomContainer"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <EditText
+        android:id="@+id/oldPasswordText"
+        android:layout_width="70dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="6dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:text="Email"
+        android:textColor="#1F2D3D"
+        app:layout_constraintBottom_toTopOf="@+id/passwordText"
+        app:layout_constraintStart_toStartOf="@+id/bottomContainer"
+        app:layout_constraintTop_toTopOf="@+id/bottomContainer" />
+
+    <EditText
+        android:id="@+id/oldPasswordField"
+        android:layout_width="288dp"
+        android:layout_height="51dp"
+        android:layout_marginStart="110dp"
+        android:layout_marginTop="29dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="83dp"
+        android:contentDescription="User Email"
+        android:ems="10"
+        android:text="eugene.bagge@gmail.com"
+        app:layout_constraintBottom_toBottomOf="@+id/bottomContainer"
+        app:layout_constraintEnd_toEndOf="@+id/bottomContainer"
+        app:layout_constraintHorizontal_bias="0.428"
+        app:layout_constraintStart_toStartOf="@+id/bottomContainer"
+        app:layout_constraintTop_toTopOf="@+id/bottomContainer"
+        app:layout_constraintVertical_bias="0.727" />
+
+    <EditText
+        android:id="@+id/passwordField"
+        android:layout_width="294dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="109dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="8dp"
+        android:contentDescription="User Password"
+        android:ems="10"
+        android:text="************************************"
+        app:layout_constraintEnd_toEndOf="@+id/bottomContainer"
+        app:layout_constraintStart_toStartOf="@+id/bottomContainer"
+        app:layout_constraintTop_toTopOf="@+id/bottomContainer" />
+
+    <Button
+        android:id="@+id/changePasswordButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="188dp"
+        android:background="#23296B"
+        android:onClick="@string/action_change_password"
+        android:text="CHANGE PASSWORD"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="141dp"
+        android:layout_height="104dp"
+        android:src="@drawable/logo"
+        app:layout_constraintBottom_toTopOf="@+id/changeButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/changePasswordButton" />
+
+    <Button
+        android:id="@+id/changeButton"
+        android:layout_width="137dp"
+        android:layout_height="56dp"
+        android:background="#23296B"
+        android:onClick="@string/menu_home"
+        android:text="SIGN OUT"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/changePasswordButton"
+        app:layout_constraintVertical_bias="0.881" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

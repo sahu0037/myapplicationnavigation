@@ -4,13 +4,21 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
+import androidx.appcompat.app.AppCompatActivity;
+import android.content.Intent;
 
+import com.example.myapplicationnavigation.MainActivity;
+import com.example.myapplicationnavigation.MainNavigationActivity;
+import com.example.myapplicationnavigation.R;
 import com.example.myapplicationnavigation.databinding.FragmentHistoryBinding;
+import com.example.myapplicationnavigation.ui.chat.ChatFragment;
+
 
 public class HistoryFragment extends Fragment {
 
@@ -24,8 +32,30 @@ public class HistoryFragment extends Fragment {
         binding = FragmentHistoryBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-        final TextView textView = binding.textHistory;
-        historyViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
+        final Button button1 = binding.continueChatButton1;
+        button1.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                startActivity(new Intent(v.getContext(), MainNavigationActivity.class));
+            }
+        });
+
+        final Button button2 = binding.continueChatButton2;
+        button2.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                startActivity(new Intent(v.getContext(), MainNavigationActivity.class));
+            }
+        });
+
+        final Button button3 = binding.continueChatButton3;
+        button3.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                startActivity(new Intent(v.getContext(), MainNavigationActivity.class));
+            }
+        });
+
+
+
+
         return root;
     }
 

@@ -1,16 +1,16 @@
-package com.example.myapplicationnavigation.ui.history;
+package com.example.myapplicationnavigation.ui.changePassword;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-public class HistoryViewModel extends ViewModel {
+public class ChangePasswordViewModel extends ViewModel {
 
     private final MutableLiveData<String> mText;
 
-    public HistoryViewModel() {
+    public ChangePasswordViewModel() {
         mText = new MutableLiveData<>();
-        mText.setValue("Okay, might I recommend the following resources: (1) https://www.cdc.gov/stres...");
+        mText.setValue("This is password change fragment");
     }
 
     public LiveData<String> getText() {

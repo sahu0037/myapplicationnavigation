@@ -53,6 +53,7 @@
         app:layout_constraintVertical_bias="0.615"
         app:srcCompat="@drawable/logo" />
 
+
     <TextView
         android:id="@+id/uselesstext"
         android:layout_width="wrap_content"
