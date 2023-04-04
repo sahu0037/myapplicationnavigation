@@ -26,18 +26,8 @@ public class MainActivity extends AppCompatActivity {
             intent.putExtra(EXTRA_MESSAGE, message);
             startActivity(intent);
         }
-
-    public static class SecondActivity extends AppCompatActivity {
-        @Override
-        protected void onCreate(Bundle savedInstanceState) {
-            super.onCreate(savedInstanceState);
-            setContentView(R.layout.secondactivity);
-
-            Intent intent=getIntent();
-            String message = intent.getStringExtra(EXTRA_MESSAGE);
-    //
-    //        TextView textView=(TextView)findViewById(R.id.GetStarted);
-    //        textView.setText(message);
-        }
+    public void sendMessageSignUp(View view){
+        Intent intent = new Intent(this, SecondActivity.class);
+        startActivity(intent);
     }
 }
