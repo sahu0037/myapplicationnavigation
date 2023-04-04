@@ -28,6 +28,7 @@
             </intent-filter>
         </activity>
         <activity
+<<<<<<< HEAD
             android:name="com.example.myapplicationnavigation.HistoryActivity1"
             android:parentActivityName=".MainNavigationActivity" >
             <meta-data
@@ -47,6 +48,13 @@
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MainNavigationActivity" />
+=======
+            android:name=".SecondActivity"
+            android:parentActivityName=".MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".SecondActivity" />
+>>>>>>> 62abd91786eec3c864ce5c9b963665e6a9bbc977
         </activity>
     </application>
 

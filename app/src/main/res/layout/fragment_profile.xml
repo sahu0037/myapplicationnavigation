@@ -20,8 +20,8 @@
 
     <ImageView
         android:id="@+id/profile_image"
-        android:layout_width="181dp"
-        android:layout_height="124dp"
+        android:layout_width="135dp"
+        android:layout_height="80dp"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
         android:layout_marginStart="16dp"
@@ -33,43 +33,22 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.619" />
+        app:layout_constraintVertical_bias="0.086" />
 
     <EditText
         android:id="@+id/profileUserName"
         android:layout_width="400dp"
         android:layout_height="57dp"
-        android:layout_marginTop="265dp"
-        android:layout_marginBottom="422dp"
+        android:layout_marginBottom="416dp"
         android:ems="10"
-        android:text="User's Name"
+        android:text="Eugene Bagge"
         android:textAlignment="center"
         android:textColor="#FFFFFF"
         android:textSize="30dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.995"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
-
-    <EditText
-        android:id="@+id/profileUserName2"
-        android:layout_width="400dp"
-        android:layout_height="57dp"
-        android:layout_marginTop="265dp"
-        android:layout_marginBottom="422dp"
-        android:ems="10"
-        android:text="User's Name"
-        android:textAlignment="center"
-        android:textColor="#FFFFFF"
-        android:textSize="30dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <View
         android:id="@+id/bottomContainer"
@@ -123,15 +102,15 @@
         android:layout_marginTop="29dp"
         android:layout_marginEnd="20dp"
         android:layout_marginBottom="83dp"
+        android:contentDescription="User Email"
         android:ems="10"
+        android:text="eugene.bagge@gmail.com"
         app:layout_constraintBottom_toBottomOf="@+id/bottomContainer"
         app:layout_constraintEnd_toEndOf="@+id/bottomContainer"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.428"
         app:layout_constraintStart_toStartOf="@+id/bottomContainer"
         app:layout_constraintTop_toTopOf="@+id/bottomContainer"
-        app:layout_constraintVertical_bias="1.0"
-        android:contentDescription="User Email"
-        android:text="eugene.bagge@gmail.com" />
+        app:layout_constraintVertical_bias="0.727" />
 
     <EditText
         android:id="@+id/passwordField"
@@ -140,29 +119,25 @@
         android:layout_marginStart="109dp"
         android:layout_marginTop="80dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginBottom="18dp"
+        android:contentDescription="User Password"
         android:ems="10"
-        app:layout_constraintBottom_toBottomOf="@+id/bottomContainer"
+        android:text="************************************"
         app:layout_constraintEnd_toEndOf="@+id/bottomContainer"
         app:layout_constraintStart_toStartOf="@+id/bottomContainer"
-        app:layout_constraintTop_toTopOf="@+id/bottomContainer"
-        android:contentDescription="User Password"
-        android:text="************************************" />
+        app:layout_constraintTop_toTopOf="@+id/bottomContainer" />
 
     <Button
         android:id="@+id/changePasswordButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="188dp"
         android:background="#23296B"
-        android:onClick="@string/menu_home"
+        android:onClick="@string/action_change_password"
         android:text="CHANGE PASSWORD"
         android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.508"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/profileUserName"
-        app:layout_constraintVertical_bias="0.489" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <ImageView
         android:id="@+id/logo"
