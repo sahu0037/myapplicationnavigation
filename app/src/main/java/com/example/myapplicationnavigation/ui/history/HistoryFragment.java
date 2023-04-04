@@ -5,25 +5,15 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
 import androidx.lifecycle.ViewModelProvider;
-import androidx.appcompat.app.AppCompatActivity;
-import android.content.Intent;
+import androidx.navigation.NavController;
+import androidx.navigation.Navigation;
 
-import com.example.myapplicationnavigation.HistoryActivity1;
-import com.example.myapplicationnavigation.HistoryActivity2;
-import com.example.myapplicationnavigation.HistoryActivity3;
-import com.example.myapplicationnavigation.MainActivity;
-import com.example.myapplicationnavigation.MainNavigationActivity;
 import com.example.myapplicationnavigation.R;
 import com.example.myapplicationnavigation.databinding.FragmentHistoryBinding;
-import com.example.myapplicationnavigation.ui.changePassword.ChangePasswordFragment;
-import com.example.myapplicationnavigation.ui.chat.ChatFragment;
-import com.example.myapplicationnavigation.ui.chat.ChatViewModel;
 
 
 public class HistoryFragment extends Fragment{
@@ -41,22 +31,24 @@ public class HistoryFragment extends Fragment{
         final Button button1 = binding.continueChatButton1;
         button1.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-//                getActivity().getSupportFragmentManager().beginTransaction().add(R.id.nav_history, new ChangePasswordFragment()).commit();
-                startActivity(new Intent(v.getContext(), HistoryActivity1.class));
+                NavController navController = Navigation.findNavController(getActivity(), R.id.nav_host_fragment_content_main);
+                navController.navigate(R.id.nav_history_1);
             }
         });
 
         final Button button2 = binding.continueChatButton2;
         button2.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                startActivity(new Intent(v.getContext(), HistoryActivity2.class));
+                NavController navController = Navigation.findNavController(getActivity(), R.id.nav_host_fragment_content_main);
+                navController.navigate(R.id.nav_history_2);
             }
         });
 
         final Button button3 = binding.continueChatButton3;
         button3.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                startActivity(new Intent(v.getContext(), HistoryActivity3.class));
+                NavController navController = Navigation.findNavController(getActivity(), R.id.nav_host_fragment_content_main);
+                navController.navigate(R.id.nav_history_3);
             }
         });
 

@@ -4,13 +4,17 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
+import androidx.navigation.NavController;
+import androidx.navigation.Navigation;
 
 import com.example.myapplicationnavigation.databinding.FragmentHomeBinding;
+import com.example.myapplicationnavigation.R;
 
 public class HomeFragment extends Fragment {
 
@@ -26,6 +30,15 @@ public class HomeFragment extends Fragment {
 
         final TextView textView = binding.textHome;
         homeViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
+
+        final Button button1 = binding.startNewChatButton;
+        button1.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                NavController navController = Navigation.findNavController(getActivity(), R.id.nav_host_fragment_content_main);
+                navController.navigate(R.id.nav_chat);
+            }
+        });
+
         return root;
     }
 
