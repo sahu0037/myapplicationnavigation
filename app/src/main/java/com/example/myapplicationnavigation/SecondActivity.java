@@ -2,6 +2,7 @@ package com.example.myapplicationnavigation;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -18,5 +19,9 @@ public  class SecondActivity extends AppCompatActivity {
         //
         //        TextView textView=(TextView)findViewById(R.id.GetStarted);
         //        textView.setText(message);
+    }
+    public void sendMessageToHome(View view){
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
     }
 }
