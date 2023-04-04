@@ -20,6 +20,8 @@ import com.example.myapplicationnavigation.MainNavigationActivity;
 import com.example.myapplicationnavigation.databinding.FragmentProfileBinding;
 import com.example.myapplicationnavigation.ui.home.HomeViewModel;
 
+import java.util.zip.Inflater;
+
 public class ProfileFragment extends Fragment {
 
     private FragmentProfileBinding binding;
@@ -30,19 +32,18 @@ public class ProfileFragment extends Fragment {
         binding = FragmentProfileBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-        final ImageView imageView = binding.profileImage;
-        profileViewModel.getText().observe(getViewLifecycleOwner(), imageView::setContentDescription);
 
-//        final TextView textView = binding.emailField;
-//        profileViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
-
-        final EditText editText = binding.passwordField;
-        profileViewModel.getText().observe(getViewLifecycleOwner(), editText::setText);
-
-        final Button button1 = binding.changePasswordButton;
-        button1.setOnClickListener(new View.OnClickListener() {
+        final Button signOut = binding.changeButton;
+        signOut.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                // Code here executes on main thread after user presses button
+                startActivity(new Intent(v.getContext(), MainActivity.class));
+            }
+        });
+
+        final Button changePassword = binding.changePasswordButton;
+        changePassword.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                startActivity(new Intent(v.getContext(), MainActivity.class));
             }
         });
 
