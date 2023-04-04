@@ -34,6 +34,22 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".SecondActivity" />
         </activity>
+
+        <activity
+            android:name=".ForgotUsername"
+            android:parentActivityName=".MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ForgotUsername" />
+        </activity>
+
+        <activity
+            android:name=".ForgotPassword"
+            android:parentActivityName=".MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ForgotPassword" />
+        </activity>
     </application>
 
 </manifest>

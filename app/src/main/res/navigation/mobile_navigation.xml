@@ -58,5 +58,15 @@
         android:name="com.example.myapplicationnavigation.ui.subHistory3.SubHistory3Fragment"
         android:label="Chat History"
         tools:layout="@layout/fragment_chat_history_3" />
+    <fragment
+        android:id="@+id/nav_forgot_username"
+        android:name="com.example.myapplicationnavigation.ui.forgotUserName.ForgotUsernameFragment"
+        android:label="Forgot Username"
+        tools:layout="@layout/forgot_username" />
+    <fragment
+        android:id="@+id/nav_forgot_password"
+        android:name="com.example.myapplicationnavigation.ui.forgotPassword.ForgotPasswordFragment"
+        android:label="Forgot Password"
+        tools:layout="@layout/forgot_password" />
 
 </navigation>

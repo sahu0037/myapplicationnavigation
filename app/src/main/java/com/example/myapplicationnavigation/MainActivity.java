@@ -31,4 +31,18 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, SecondActivity.class);
         startActivity(intent);
     }
+
+    public void forgotUsername(View view){
+//        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);
+//        navController.navigate(R.id.nav_forgot_username);
+        Intent intent = new Intent(this, ForgotUsername.class);
+        startActivity(intent);
+    }
+
+    public void forgotPassword(View view){
+//        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);
+//        navController.navigate(R.id.nav_forgot_password);
+        Intent intent = new Intent(this, ForgotPassword.class);
+        startActivity(intent);
+    }
 }
