@@ -88,7 +88,7 @@
         android:layout_marginStart="6dp"
         android:layout_marginTop="16dp"
         android:ems="10"
-        android:text="Email"
+        android:text="Username"
         android:textColor="#1F2D3D"
         app:layout_constraintBottom_toTopOf="@+id/passwordText"
         app:layout_constraintStart_toStartOf="@+id/bottomContainer"

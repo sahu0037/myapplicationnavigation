@@ -1,5 +1,6 @@
 package com.example.myapplicationnavigation.ui.changePassword;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,6 +14,7 @@ import androidx.lifecycle.ViewModelProvider;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 
+import com.example.myapplicationnavigation.MainActivity;
 import com.example.myapplicationnavigation.R;
 import com.example.myapplicationnavigation.databinding.FragmentChangePasswordBinding;
 
@@ -34,8 +36,7 @@ public class ChangePasswordFragment extends Fragment {
         final Button button1 = binding.changeButton;
         button1.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                NavController navController = Navigation.findNavController(getActivity(), R.id.nav_host_fragment_content_main);
-                navController.navigate(R.id.nav_profile);
+                startActivity(new Intent(v.getContext(), MainActivity.class));
             }
         });
 
