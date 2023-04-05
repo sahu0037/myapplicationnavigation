@@ -9,30 +9,52 @@
         android:id="@+id/phone"
         android:layout_width="351dp"
         android:layout_height="49dp"
+        android:layout_marginTop="20dp"
         android:ems="10"
         android:inputType="phone"
-        android:text="Phone Number"
-        tools:layout_editor_absoluteX="32dp"
-        tools:layout_editor_absoluteY="288dp" />
+        android:hint="Phone Number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
 
     <Button
         android:id="@+id/textButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="84dp"
-        android:onClick="@string/menu_home"
+        android:layout_marginTop="20dp"
+        android:onClick="sendMessageToHome"
         android:text="SEND SMS WITH USERNAME"
+        android:background="#0E1E68"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toTopOf="@+id/confirmation"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="360dp" />
+        app:layout_constraintTop_toBottomOf="@+id/phone"
+        app:layout_constraintVertical_bias="0.024" />
 
     <ImageView
         android:id="@+id/imageView2"
         android:layout_width="163dp"
         android:layout_height="138dp"
-        android:layout_marginStart="124dp"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="64dp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/logo" />
+
+    <TextView
+        android:id="@+id/confirmation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="344dp"
+        android:gravity="center"
+        android:text=""
+        android:textSize="22dp"
+        android:textColor="#0E1E68"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

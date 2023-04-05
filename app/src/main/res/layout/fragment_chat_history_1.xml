@@ -37,6 +37,8 @@
             android:layout_width="276dp"
             android:layout_height="wrap_content"
             android:textAllCaps="false"
+            android:background="#8CB6D8"
+            android:gravity="start|left"
             android:text="Howdy! How are you today?" />
 
         <TextView
@@ -50,6 +52,7 @@
             android:id="@+id/button2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:background="#69E0E4"
             android:text="I'm not so good. Thank you for asking"
             android:textAllCaps="false" />
 
@@ -63,6 +66,7 @@
             android:id="@+id/button3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:background="#8CB6D8"
             android:text="I'm sorry to hear that. Want some recommendations?"
             android:textAllCaps="false" />
 
@@ -72,10 +76,12 @@
             android:layout_height="wrap_content"
             android:text="You"
             android:textSize="18sp" />
+
         <Button
             android:id="@+id/button4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:background="#69E0E4"
             android:text="Sure."
             android:textAllCaps="false" />
 
@@ -85,10 +91,12 @@
             android:layout_height="wrap_content"
             android:text="Botty"
             android:textSize="18sp" />
+
         <Button
             android:id="@+id/button5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:background="#8CB6D8"
             android:text="Okay, might I recommend the following resources: (1) https://www.cdc.gov/mentalhealth/stress-coping/index.html"
             android:textAllCaps="false" />
 
@@ -127,6 +135,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Send"
+                android:background="#0E1E68"
+                android:textColor="#FFFFFF"
                 android:textSize="18sp" />
 
         </LinearLayout>

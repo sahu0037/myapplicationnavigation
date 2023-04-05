@@ -37,6 +37,7 @@
             android:layout_width="276dp"
             android:layout_height="wrap_content"
             android:textAllCaps="false"
+            android:background="#8CB6D8"
             android:text="Hey there! The weather is nice today. I hope you are feeling great as well!" />
 
         <TextView
@@ -50,6 +51,7 @@
             android:id="@+id/button2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:background="#69E0E4"
             android:text="I'm okay. Things are a bit hectic right now to be honest."
             android:textAllCaps="false" />
 
@@ -63,6 +65,7 @@
             android:id="@+id/button3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:background="#8CB6D8"
             android:text="Is it because of school work?"
             android:textAllCaps="false" />
 
@@ -76,6 +79,7 @@
             android:id="@+id/button4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:background="#69E0E4"
             android:text="No, actually my parents just got divorced. I feel so stressed out right now..."
             android:textAllCaps="false" />
 
@@ -89,6 +93,7 @@
             android:id="@+id/button5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:background="#8CB6D8"
             android:text="Stress is a common result of big life changes so it makes sense that you are feeling that way. I would recommend you taking it easy, practice breathing and do some light exercise."
             android:textAllCaps="false" />
 
@@ -127,6 +132,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Send"
+                android:background="#0E1E68"
+                android:textColor="#FFFFFF"
                 android:textSize="18sp" />
 
         </LinearLayout>

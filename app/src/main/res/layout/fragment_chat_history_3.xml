@@ -37,6 +37,7 @@
             android:layout_width="276dp"
             android:layout_height="wrap_content"
             android:textAllCaps="false"
+            android:background="#8CB6D8"
             android:text="Hello friend! Hope you are well!" />
 
         <TextView
@@ -50,6 +51,7 @@
             android:id="@+id/button2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:background="#69E0E4"
             android:text="I am! Actually I just thought of you."
             android:textAllCaps="false" />
 
@@ -63,6 +65,8 @@
             android:id="@+id/button3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:background="#8CB6D8"
+            android:gravity="start|left"
             android:text="Aww, that's sweet. You are a precious friend to me too."
             android:textAllCaps="false" />
 
@@ -76,6 +80,7 @@
             android:id="@+id/button4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:background="#69E0E4"
             android:text="There is one thing I would like you to be updated though. I think you would look much more awesome in pink. The app should allow users to change your color to pink."
             android:textAllCaps="false" />
 
@@ -89,6 +94,7 @@
             android:id="@+id/button5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:background="#8CB6D8"
             android:text="Okay, thank you for your feedback. Your information is getting sent to a relevent person to handle. Pink would be cute!"
             android:textAllCaps="false" />
 
@@ -127,6 +133,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Send"
+                android:background="#0E1E68"
+                android:textColor="#FFFFFF"
                 android:textSize="18sp" />
 
         </LinearLayout>

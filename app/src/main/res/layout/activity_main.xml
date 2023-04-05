@@ -39,6 +39,8 @@
         android:layout_marginTop="32dp"
         android:onClick="sendMessage"
         android:text="LOG IN"
+        android:background="#0E1E68"
+        android:textColor="#FFFFFF"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Password" />
 
@@ -59,42 +61,53 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="72dp"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="36dp"
         android:text="Don't have an account"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button2" />
+        app:layout_constraintTop_toBottomOf="@+id/forgotPasswordButton"
+        app:layout_constraintVertical_bias="0.092" />
 
     <Button
         android:id="@+id/signup"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="464dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="48dp"
+        android:background="#0E1E68"
         android:onClick="sendMessageSignUp"
         android:text="SIGN UP"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.885"
+        app:layout_constraintHorizontal_bias="0.597"
         app:layout_constraintStart_toEndOf="@+id/uselesstext"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/forgotPasswordButton"
+        app:layout_constraintVertical_bias="0.12" />
 
-    <Button
+    <TextView
         android:id="@+id/forgotUsernameButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
         android:onClick="forgotUsername"
-        android:text="Forgot Username"
+        android:text="Forgot Username?"
+        android:textColor="#0E1E68"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/signup" />
+        app:layout_constraintTop_toBottomOf="@+id/button2" />
 
-    <Button
+    <TextView
         android:id="@+id/forgotPasswordButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:onClick="forgotPassword"
-        android:text="Forgot Password"
+        android:text="Forgot Password?"
+        android:gravity="center"
+        android:textColor="#0E1E68"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/forgotUsernameButton" />
