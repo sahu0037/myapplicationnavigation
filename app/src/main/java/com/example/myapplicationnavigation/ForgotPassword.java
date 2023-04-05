@@ -3,6 +3,7 @@ package com.example.myapplicationnavigation;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -21,7 +22,6 @@ public  class ForgotPassword extends AppCompatActivity {
         //        textView.setText(message);
     }
     public void sendMessageToHome(View view){
-        Intent intent = new Intent(this, MainActivity.class);
-        startActivity(intent);
+        ((TextView)findViewById(R.id.confirmation)).setText("A message with a link to change password has been sent to your phone number");
     }
 }
