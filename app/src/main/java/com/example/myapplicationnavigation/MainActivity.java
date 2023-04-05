@@ -39,12 +39,21 @@ public class MainActivity extends AppCompatActivity {
     public void sendMessage(View view){
         Intent intent = new Intent(this, MainNavigationActivity.class);
         EditText editTest = (EditText) findViewById(R.id.Username);
-        String message = editTest.getText().toString();
-        intent.putExtra(EXTRA_MESSAGE, message);
-        username = editTest.getText().toString();
-        System.out.println("--------------------------------username"+username);
-        this.setUsername(username);
-        startActivity(intent);
+        EditText pw = (EditText) findViewById(R.id.Password);
+        if (editTest.getText().toString().equals("") && editTest.getText().length() <= 0){
+            editTest.setError("Username can't be empty");
+        }
+        if (pw.getText().toString().equals("") && pw.getText().length() <= 0){
+            pw.setError("Password can't be empty");
+        }
+        else {
+            String message = editTest.getText().toString();
+            intent.putExtra(EXTRA_MESSAGE, message);
+            username = editTest.getText().toString();
+            System.out.println("--------------------------------username" + username);
+            this.setUsername(username);
+            startActivity(intent);
+        }
     }
     public void sendMessageSignUp(View view){
         Intent intent = new Intent(this, SecondActivity.class);
