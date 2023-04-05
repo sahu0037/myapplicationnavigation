@@ -20,9 +20,6 @@ public class HomeViewModel extends ViewModel {
         String username = mainActivity.getUsername();
         mText.setValue("Welcome to Tranquility! "+ username);
 
-
-
-
     }
 
 

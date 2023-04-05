@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Menu;
+import android.widget.TextView;
 
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
@@ -54,6 +55,7 @@ public class MainNavigationActivity extends AppCompatActivity {
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.main, menu);
+        setUsernameSideBar();
         return true;
     }
 
@@ -63,5 +65,10 @@ public class MainNavigationActivity extends AppCompatActivity {
         return NavigationUI.navigateUp(navController, mAppBarConfiguration)
                 || super.onSupportNavigateUp();
     }
-
+    public void setUsernameSideBar() {
+        MainActivity mainActivity = MainActivity.getInstance();
+        TextView usernameNavigation = (TextView) findViewById(R.id.textView);
+        if(usernameNavigation!=null)
+            usernameNavigation.setText(mainActivity.getUsername());
+    }
 }
