@@ -13,6 +13,7 @@ import androidx.lifecycle.ViewModelProvider;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 
+import com.example.myapplicationnavigation.MainActivity;
 import com.example.myapplicationnavigation.databinding.FragmentHomeBinding;
 import com.example.myapplicationnavigation.R;
 
@@ -38,10 +39,16 @@ public class HomeFragment extends Fragment {
                 navController.navigate(R.id.nav_chat);
             }
         });
-
+        setUsernameSideBar(root);
         return root;
     }
 
+    public void setUsernameSideBar(View root) {
+        MainActivity mainActivity = MainActivity.getInstance();
+        TextView usernameNavigation = (TextView) root.findViewById(R.id.textView);
+        if(usernameNavigation!=null)
+            usernameNavigation.setText(mainActivity.getUsername());
+    }
     @Override
     public void onDestroyView() {
         super.onDestroyView();

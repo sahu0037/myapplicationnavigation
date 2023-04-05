@@ -8,12 +8,28 @@ import android.view.View;
 import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity {
-
-    //a list to store all the products
-
-
-    //the recycrview
+    
     public static final String EXTRA_MESSAGE = "com.example.myfirstapp.MESSAGE";
+
+    private static MainActivity mainActivityInstance;
+
+    private static String username;
+    public static MainActivity getInstance(){
+        if (mainActivityInstance == null){
+            mainActivityInstance = new MainActivity();
+        }
+        return mainActivityInstance;
+    }
+    public MainActivity(){
+
+    }
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,6 +41,9 @@ public class MainActivity extends AppCompatActivity {
         EditText editTest = (EditText) findViewById(R.id.Username);
         String message = editTest.getText().toString();
         intent.putExtra(EXTRA_MESSAGE, message);
+        username = editTest.getText().toString();
+        System.out.println("--------------------------------username"+username);
+        this.setUsername(username);
         startActivity(intent);
     }
     public void sendMessageSignUp(View view){
@@ -45,4 +64,7 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, ForgotPassword.class);
         startActivity(intent);
     }
+
+
+
 }

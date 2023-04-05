@@ -50,7 +50,7 @@ public class ProfileFragment extends Fragment {
                 navController.navigate(R.id.nav_change_password);
             }
         });
-
+        setUsernameSideBar(root);
         return root;
     }
 
@@ -58,5 +58,15 @@ public class ProfileFragment extends Fragment {
     public void onDestroyView() {
         super.onDestroyView();
         binding = null;
+    }
+
+    public void setUsernameSideBar(View root) {
+        MainActivity mainActivity = MainActivity.getInstance();
+        TextView usernameProfile = (TextView) root.findViewById(R.id.profileUserName);
+        TextView usernameEmail = (TextView) root.findViewById(R.id.oldPasswordField);
+        if(usernameProfile!=null)
+            usernameProfile.setText(mainActivity.getUsername());
+        if(usernameEmail!=null)
+            usernameEmail.setText(mainActivity.getUsername());
     }
 }
