@@ -24,7 +24,12 @@ public  class ForgotUsername extends AppCompatActivity {
         setContentView(R.layout.forgot_username);
         binding = ForgotUsernameBinding.inflate(getLayoutInflater());
     }
-    public void sendMessageToHome(View view){
-        ((TextView)findViewById(R.id.confirmation)).setText("A message with your username has been sent to your phone number");
+    public void sendMessageToHome(View view) {
+        EditText e1 = (EditText) findViewById(R.id.phone);
+        if (e1.getText().toString().equals("") && e1.getText().length() <= 0) {
+            e1.setError("Phone number can't be empty");
+        } else {
+            ((TextView) findViewById(R.id.confirmation)).setText("A message with your username has been sent to your phone number");
+        }
     }
 }
