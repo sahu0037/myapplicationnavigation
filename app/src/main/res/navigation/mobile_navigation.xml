@@ -15,7 +15,13 @@
         android:id="@+id/nav_chat"
         android:name="com.example.myapplicationnavigation.ui.chat.ChatFragment"
         android:label="@string/menu_chat"
-        tools:layout="@layout/fragment_chat" />
+        tools:layout="@layout/fragment_chat" >
+
+        <action
+            android:id="@+id/action_chatFragment_to_mentalHealthAdviceFragment"
+            app:destination="@id/nav_mental_health_advice"/>
+
+    </fragment>
 
     <fragment
         android:id="@+id/nav_history"
@@ -68,5 +74,11 @@
         android:name="com.example.myapplicationnavigation.ui.forgotPassword.ForgotPasswordFragment"
         android:label="Forgot Password"
         tools:layout="@layout/forgot_password" />
+
+    <fragment
+        android:id="@+id/nav_mental_health_advice"
+        android:name="com.example.myapplicationnavigation.ui.chat.MentalHealthAdviceFragment"
+        android:label="Mental Health Advice"
+        tools:layout="@layout/mental_health_advice_fragment"/>
 
 </navigation>
