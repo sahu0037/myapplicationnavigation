@@ -13,5 +13,8 @@
     <string name="menu_history">Chat History</string>
     <string name="menu_setting">Settings</string>
     <string name="menu_profile">Profile</string>
+    <string name="back_button_description">Back</string>
+    <string name="mental_health_advice">Here are some mental health advice: ...\n</string>
+
 
 </resources>
